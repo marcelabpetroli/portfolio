@@ -96,7 +96,7 @@
     </section>
 
     <section class="technology">
-      <h2 class="technology__title">Techonologies</h2>
+      <h2 class="technology__title">Technologies</h2>
       <ul class="technology__logos">
         <li>
           <img
