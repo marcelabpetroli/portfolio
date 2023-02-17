@@ -37,7 +37,9 @@
             target="blank"
             rel="noreferrer"
           >
-            <i class="fa-brands fa-github heading__social--media--logo"></i>
+            <i
+              class="fa-brands fa-github heading__social--media--logo moving__git"
+            ></i>
           </a>
           <a
             class="heading__social--media floating-in"
@@ -197,7 +199,14 @@
           :href="projectData.projectsArray[index].github"
           target="_blank"
           rel="noreferrer"
-          ><i class="uil uil-arrow"></i
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          class="projects__links--code"
+          :href="projectData.projectsArray[index].website"
+          target="_blank"
+          rel="noreferrer"
+          ><i class="fa-solid fa-arrow-up-from-bracket"></i
         ></a>
       </div>
     </li>
@@ -313,8 +322,8 @@ html {
   margin-top: 10px;
   box-shadow: rgba(0, 0, 0, 0.263) 0px 3px 8px;
 
-  @media (min-width: 1000px) {
-    width: 92%;
+  @media (min-width: 768px) {
+    width: 90%;
     flex-direction: row;
     gap: 5rem;
   }
@@ -378,6 +387,11 @@ html {
   padding-bottom: 10px;
   border-top: solid 1px rgb(59, 147, 162);
   border-bottom: solid 1px rgb(59, 147, 162);
+
+  @media (min-width: 768px) {
+    width: 50%;
+    border: none;
+  }
 
   @media (min-width: 1084px) {
     width: 50%;
@@ -518,7 +532,7 @@ html {
   }
 }
 
-.fa-github {
+.moving__git {
   animation-name: floating-git;
   animation-duration: 6s;
   animation-iteration-count: infinite;
@@ -761,22 +775,24 @@ html {
   }
 
   &__links {
-    width: 40px;
+    display: flex;
+    gap: 20px;
     border-radius: 25px;
-    background-color: rgb(61, 61, 61);
     margin-top: 3px;
     font-size: 2rem;
-
-    &:hover {
-      background-color: white;
-    }
 
     &--code {
       display: block;
       width: 40px;
       color: white;
+      padding: 2px;
       background-color: rgba(52, 51, 51, 0.563);
       border-radius: 20px;
+
+      &:hover {
+        background-color: white;
+        color: rgb(49, 49, 49);
+      }
     }
   }
 }
