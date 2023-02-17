@@ -56,7 +56,7 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a class="navigation__link" href="">Projects</a>
+            <a class="navigation__link" href="#projects">Projects</a>
           </li>
           <li class="navigation__item">
             <a
@@ -173,44 +173,48 @@
       </ul>
     </section>
   </div>
-  <ul class="projects">
-    <li
-      class="projects__list"
-      v-for="(items, index) in projectData.projectsArray"
-      v-bind:key="items"
-    >
-      <h2 class="projects__title">
-        {{ projectData.projectsArray[index].title }}
-      </h2>
-      <a
-        class="projects__web"
-        :href="projectData.projectsArray[index].website"
-        target="_blank"
-        rel="noreferrer"
+  <section class="projects" id="projects">
+    <h2 class="projects__title">| Projects |</h2>
+
+    <ul class="projects__list">
+      <li
+        class="projects__item"
+        v-for="(items, index) in projectData.projectsArray"
+        v-bind:key="items"
       >
-        <img
-          class="projects__image"
-          :src="projectData.projectsArray[index].image"
-          alt=""
-      /></a>
-      <div class="projects__links">
+        <h2>
+          {{ projectData.projectsArray[index].title }}
+        </h2>
         <a
-          class="projects__links--code"
-          :href="projectData.projectsArray[index].github"
-          target="_blank"
-          rel="noreferrer"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a
-          class="projects__links--code"
+          class="projects__web"
           :href="projectData.projectsArray[index].website"
           target="_blank"
           rel="noreferrer"
-          ><i class="fa-solid fa-arrow-up-from-bracket"></i
-        ></a>
-      </div>
-    </li>
-  </ul>
+        >
+          <img
+            class="projects__image"
+            :src="projectData.projectsArray[index].image"
+            alt=""
+        /></a>
+        <div class="projects__links">
+          <a
+            class="projects__links--code"
+            :href="projectData.projectsArray[index].github"
+            target="_blank"
+            rel="noreferrer"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            class="projects__links--code"
+            :href="projectData.projectsArray[index].website"
+            target="_blank"
+            rel="noreferrer"
+            ><i class="fa-solid fa-arrow-up-from-bracket"></i
+          ></a>
+        </div>
+      </li>
+    </ul>
+  </section>
   <footer class="footer">
     <p>Developed by Marcela</p>
   </footer>
@@ -389,7 +393,7 @@ html {
   border-bottom: solid 1px rgb(59, 147, 162);
 
   @media (min-width: 768px) {
-    width: 50%;
+    width: 55%;
     border: none;
   }
 
@@ -592,6 +596,11 @@ html {
     font-size: 1.6rem;
   }
 
+  @media (min-width: 1200px) {
+    border-radius: 3px;
+    font-size: 2rem;
+  }
+
   &__list {
     height: 50px;
     display: flex;
@@ -685,6 +694,7 @@ html {
 
   @media (min-width: 1000px) {
     border-radius: 3px;
+    padding: 45px;
   }
 
   &__title {
@@ -741,15 +751,37 @@ html {
   gap: 30px;
   margin: 4rem 0 4rem 0;
 
-  @media (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
   @media (min-width: 1084px) {
     margin: 12rem 0 14rem 0;
   }
 
+  &__title {
+    font-size: 3rem;
+    background-color: rgba(131, 94, 147, 0.668);
+    color: white;
+    width: 100%;
+    padding: 10px;
+
+    @media (min-width: 1084px) {
+      padding: 22px;
+    }
+  }
+
   &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 4rem 0 4rem 0;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
     box-shadow: rgba(0, 0, 0, 0.263) 0px 3px 8px;
     border-radius: 25px;
     background-color: rgb(209, 202, 220);
