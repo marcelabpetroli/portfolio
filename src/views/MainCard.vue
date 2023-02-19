@@ -746,26 +746,18 @@ html {
   margin: 4rem 0 4rem 0;
 
   @media (min-width: 1084px) {
-    margin: 12rem 0 0 0;
-  }
-
-  @media (min-width: 1400px) {
-    margin: 12rem 0 6rem 0;
+    margin: 4rem 0 0 0;
   }
 
   &__title {
     font-size: 3rem;
-    background-color: rgba(131, 94, 147, 0.668);
+    background-color: rgba(93, 91, 94, 0.668);
     color: white;
     width: 100%;
     padding: 10px;
 
     @media (min-width: 1084px) {
       padding: 12px;
-    }
-
-    @media (min-width: 1400px) {
-      margin-bottom: 4rem;
     }
   }
 
@@ -780,6 +772,7 @@ html {
     @media (min-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
+      margin: 3rem 0 4rem 0;
     }
   }
 
@@ -845,7 +838,7 @@ html {
   letter-spacing: 1px;
 
   @media (min-width: 1084px) {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 </style>
