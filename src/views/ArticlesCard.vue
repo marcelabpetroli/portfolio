@@ -219,18 +219,18 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 25px;
-  border-radius: 1.5rem;
   background-image: url(https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
   background-color: purple;
   background-blend-mode: screen;
   background-size: cover;
   transition: 0.3s;
-  width: 80%;
-  margin: auto;
-  margin-top: 10px;
   box-shadow: rgba(0, 0, 0, 0.263) 0px 3px 8px;
-  min-height: 40vh;
+  min-height: 60vh;
+
+  @media (min-width: 768px) {
+    min-height: 40vh;
+    margin: auto;
+  }
 
   @media (min-width: 1000px) {
     width: 92%;

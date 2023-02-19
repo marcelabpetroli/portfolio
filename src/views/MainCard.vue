@@ -746,7 +746,11 @@ html {
   margin: 4rem 0 4rem 0;
 
   @media (min-width: 1084px) {
-    margin: 12rem 0 14rem 0;
+    margin: 12rem 0 0 0;
+  }
+
+  @media (min-width: 1400px) {
+    margin: 12rem 0 6rem 0;
   }
 
   &__title {
@@ -757,7 +761,11 @@ html {
     padding: 10px;
 
     @media (min-width: 1084px) {
-      padding: 22px;
+      padding: 12px;
+    }
+
+    @media (min-width: 1400px) {
+      margin-bottom: 4rem;
     }
   }
 
