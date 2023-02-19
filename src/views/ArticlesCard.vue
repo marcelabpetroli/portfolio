@@ -1,4 +1,13 @@
 <template>
+  <div v-if="displaycontact" class="contact__me">
+    <div class="contact__me--inner">
+      <div
+        @click="displaycontact = !displaycontact"
+        class="contact__me--button x-button"
+      ></div>
+      <ContactMe />
+    </div>
+  </div>
   <div class="column">
     <header class="hero">
       <section class="heading articles">
@@ -20,11 +29,36 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <RouterLink class="navigation__link" to="/">Home</RouterLink>
+            <router-link
+              class="navigation__link"
+              :to="{ name: 'Main', hash: '#projects' }"
+              >Projects</router-link
+            >
           </li>
+          <li class="navigation__item">
+            <a
+              class="navigation__link"
+              href="./resume-marcela-petroli.pdf"
+              target="blank"
+              rel="noreferrer"
+              >Resume</a
+            >
+          </li>
+          <li class="navigation__item">
+            <router-link class="navigation__link" :to="{ name: 'Main' }">
+              Home</router-link
+            >
+          </li>
+
+          <div @click.prevent="displaycontact = !displaycontact">
+            <li class="navigation__item">
+              <a class="navigation__link" href="">Contact</a>
+            </li>
+          </div>
         </ul>
       </nav>
     </section>
+
     <section class="content slider-thumb">
       <h3 class="content__title">Web Development Bootcamp: my experience</h3>
       <p class="content__main">
@@ -103,10 +137,83 @@
 </template>
 
 <script>
-export default {};
+import ContactMe from "../views/ContactMe.vue";
+
+export default {
+  data() {
+    return {
+      displaycontact: false,
+    };
+  },
+  components: {
+    ContactMe,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
+.contact__me {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin-top: 8%;
+  animation: animate-contact 1s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgb(241, 239, 239);
+  height: 100vh;
+
+  @media (min-width: 1084px) {
+    margin-top: 5%;
+    height: 70vh;
+  }
+
+  &--button {
+    position: relative;
+    top: 21px;
+    left: 10px;
+    width: 45px;
+    height: 45px;
+    background-color: #ebebeb;
+    margin-left: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    border-radius: 50px;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid #ac9cee;
+      background-color: rgb(197, 176, 234);
+    }
+  }
+}
+.x-button::after {
+  content: " \002B";
+  font-weight: bold;
+  font-size: 2.6rem;
+  color: black;
+}
+
+@keyframes animate-contact {
+  from {
+    margin-top: -25%;
+  }
+  to {
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .column {
+    max-width: 1500px;
+    margin: auto;
+  }
+}
 .hero {
   display: flex;
   flex-direction: column;

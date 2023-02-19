@@ -56,7 +56,9 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a class="navigation__link" href="#projects">Projects</a>
+            <router-link class="navigation__link" to="/#projects"
+              >Projects</router-link
+            >
           </li>
           <li class="navigation__item">
             <a
