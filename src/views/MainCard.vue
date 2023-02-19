@@ -314,22 +314,17 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 25px;
-  border-radius: 1.5rem;
   background-image: url(https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
   background-color: purple;
   background-blend-mode: screen;
   background-size: cover;
   transition: 0.3s;
-  width: 80%;
-  margin: auto;
-  margin-top: 10px;
   box-shadow: rgba(0, 0, 0, 0.263) 0px 3px 8px;
 
   @media (min-width: 768px) {
-    width: 90%;
     flex-direction: row;
     gap: 5rem;
+    margin: auto;
   }
 
   @media (min-width: 1700px) {
@@ -386,11 +381,8 @@ html {
   gap: 10px;
   letter-spacing: 1px;
   line-height: 40px;
-  margin-top: 10px;
   background-color: rgba(255, 255, 255, 0.5);
   padding-bottom: 10px;
-  border-top: solid 1px rgb(59, 147, 162);
-  border-bottom: solid 1px rgb(59, 147, 162);
 
   @media (min-width: 768px) {
     width: 55%;
