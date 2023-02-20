@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="column">
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__image--box">
         <img
           class="header__image--img"
@@ -217,6 +217,11 @@
       </li>
     </ul>
   </section>
+  <div>
+    <router-link to="/#header"
+      ><img class="up-icon" src="../assets/up.png" alt=""
+    /></router-link>
+  </div>
   <footer class="footer">
     <p>Developed by Marcela</p>
   </footer>
@@ -742,7 +747,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 4rem 0 4rem 0;
+  margin: 4rem 0 0 0;
 
   @media (min-width: 1084px) {
     margin: 4rem 0 0 0;
@@ -826,6 +831,31 @@ html {
   }
 }
 
+.up-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.263) 0px 3px 8px;
+  animation: bounce 3s infinite;
+  opacity: 0.9;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
 .footer {
   background-color: rgb(87, 87, 87);
   color: white;
@@ -836,8 +866,8 @@ html {
   justify-content: flex-end;
   font-size: 1.4rem;
   font-weight: bold;
-  padding-right: 30px;
   letter-spacing: 1px;
+  padding: 3rem 3rem;
 
   @media (min-width: 1084px) {
     font-size: 1.4rem;

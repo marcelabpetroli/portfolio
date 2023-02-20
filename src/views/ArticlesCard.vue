@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="column">
-    <header class="hero">
+    <header class="hero" id="hero">
       <section class="heading articles">
         <h3 class="heading__primary">Articles</h3>
         <div class="heading__primary--sub">
@@ -129,6 +129,11 @@
       </p>
       <p class="content__small">By Marcela | February 2023</p>
     </section>
+  </div>
+  <div>
+    <router-link to="/articles/#hero"
+      ><img class="up-icon" src="../assets/up.png" alt=""
+    /></router-link>
   </div>
   <footer class="footer">
     <RouterLink class="navigation__link footer__home" to="/">Home |</RouterLink>
@@ -354,7 +359,6 @@ export default {
 }
 
 .footer {
-  display: flex;
   gap: 6rem;
 
   &__home {
