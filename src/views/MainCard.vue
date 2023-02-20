@@ -742,22 +742,24 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
   margin: 4rem 0 4rem 0;
 
   @media (min-width: 1084px) {
     margin: 4rem 0 0 0;
+    gap: 20px;
   }
 
   &__title {
-    font-size: 3rem;
-    background-color: rgba(93, 91, 94, 0.668);
-    color: white;
+    font-size: 2.4rem;
+    background-color: rgba(93, 91, 94, 0.8);
+    color: rgb(194, 181, 237);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
 
     @media (min-width: 1084px) {
-      padding: 12px;
+      padding: 14px;
     }
   }
 
