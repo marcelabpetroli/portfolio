@@ -385,7 +385,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   letter-spacing: 1px;
   line-height: 40px;
   background-color: rgba(255, 255, 255, 0.5);
