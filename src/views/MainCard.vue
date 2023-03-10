@@ -127,6 +127,14 @@
         <li>
           <img
             class="technology__logos--image"
+            src="../assets/jest.webp"
+            alt=""
+          />
+          <p class="technology__logos--text">Jest</p>
+        </li>
+        <li>
+          <img
+            class="technology__logos--image"
             src="../assets/sql.png"
             alt=""
           />
@@ -757,15 +765,15 @@ html {
 
   &__title {
     font-size: 2.4rem;
-    background-color: rgba(93, 91, 94, 0.8);
-    color: rgb(194, 181, 237);
+    background-color: rgba(104, 106, 129, 0.8);
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     width: 100%;
-    padding: 12px;
+    padding: 14px;
 
     @media (min-width: 1084px) {
-      padding: 14px;
+      padding: 20px;
     }
   }
 
