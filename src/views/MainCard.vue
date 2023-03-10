@@ -174,53 +174,54 @@
         </li>
       </ul>
     </section>
-  </div>
-  <section class="projects" id="projects">
-    <h2 class="projects__title">| Projects |</h2>
 
-    <ul class="projects__list">
-      <li
-        class="projects__item"
-        v-for="(items, index) in projectData.projectsArray"
-        v-bind:key="items"
-      >
-        <h2>
-          {{ projectData.projectsArray[index].title }}
-        </h2>
-        <a
-          class="projects__web"
-          :href="projectData.projectsArray[index].website"
-          target="_blank"
-          rel="noreferrer"
+    <section class="projects" id="projects">
+      <h2 class="projects__title">| Projects |</h2>
+
+      <ul class="projects__list">
+        <li
+          class="projects__item"
+          v-for="(items, index) in projectData.projectsArray"
+          v-bind:key="items"
         >
-          <img
-            class="projects__image"
-            :src="projectData.projectsArray[index].image"
-            alt=""
-        /></a>
-        <div class="projects__links">
+          <h2>
+            {{ projectData.projectsArray[index].title }}
+          </h2>
           <a
-            class="projects__links--code"
-            :href="projectData.projectsArray[index].github"
-            target="_blank"
-            rel="noreferrer"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a
-            class="projects__links--code"
+            class="projects__web"
             :href="projectData.projectsArray[index].website"
             target="_blank"
             rel="noreferrer"
-            ><i class="fa-solid fa-arrow-up-from-bracket"></i
-          ></a>
-        </div>
-      </li>
-    </ul>
-  </section>
-  <div>
-    <router-link to="/#header"
-      ><img class="up-icon" src="../assets/up.png" alt=""
-    /></router-link>
+          >
+            <img
+              class="projects__image"
+              :src="projectData.projectsArray[index].image"
+              alt=""
+          /></a>
+          <div class="projects__links">
+            <a
+              class="projects__links--code"
+              :href="projectData.projectsArray[index].github"
+              target="_blank"
+              rel="noreferrer"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              class="projects__links--code"
+              :href="projectData.projectsArray[index].website"
+              target="_blank"
+              rel="noreferrer"
+              ><i class="fa-solid fa-arrow-up-from-bracket"></i
+            ></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <div>
+      <router-link to="/#header"
+        ><img class="up-icon" src="../assets/up.png" alt=""
+      /></router-link>
+    </div>
   </div>
   <footer class="footer">
     <p>Developed by Marcela</p>
